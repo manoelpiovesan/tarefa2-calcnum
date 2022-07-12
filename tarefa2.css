@@ -1,0 +1,17 @@
+html,body{
+    background-color: #121212;
+}
+
+.titulo{
+    padding: 20px;
+    background-color: #121212;
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+
+    font-family: Inter, sans-serif;
+}
+
+.card-header h3{
+    margin-top: 10px;
+}
