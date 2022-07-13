@@ -26,7 +26,7 @@
             
             <div class="row">
                 <div class="col">
-                    <div class="card">
+                    <div class="card card-dados">
                         <div class="card-header text-center"><h3>Dados</h3></div>
                         <div class="card-body ">
                            
@@ -132,57 +132,73 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-header text-center">
-                           <h3>Resultados</h3>
+                            <h3>Gráfico</h3>
                         </div>
                         <div class="card-body">
-                            P<small>4</small>(x)= <span id="p4x"></span>
-                            <hr>
-                            R*= <span id="r-estrela"></span>
-                            <hr>
-                            DRP= <span id="drp-resultado"></span>%
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="legendas">
+                                        <span class="legenda"><div class="red-circle"></div> R* </span>
+                                        <span class="legenda"><div class="blue-circle"></div> Referência</span>
+                                    </div>
+                                    <hr>
+                                    <canvas id="myChart" style="width:100%;"></canvas>
+                                </div>
+                               </div>
                         </div>
                     </div>
                     <br>
                     <div class="card">
                         <div class="card-header text-center">
-                            <h3>L<small><small>n</small></small>(x)</h3>
+                           <h3>Resultados</h3>
                         </div>
                         <div class="card-body">
-                            L<small>0</small>= <span id="l0"></span>
-                            <hr>
-                            L<small>1</small>= <span id="l1"></span>
-                            <hr>
-                            L<small>2</small>= <span id="l2"></span>
-                            <hr>
-                            L<small>3</small>= <span id="l3"></span>
-                            <hr>
-                            L<small>4</small>= <span id="l4"></span>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body" style="font-size: 15px;">
+                                            P<small>4</small>(x)= <span id="p4x"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            R*= <span id="r-estrela"></span>
+                                            <hr>
+                                            DRP= <span id="drp-resultado"></span>%
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            L<small>0</small>= <span id="l0"></span>
+                                            <hr>
+                                            L<small>1</small>= <span id="l1"></span>
+                                            <hr>
+                                            L<small>2</small>= <span id="l2"></span>
+                                            <hr>
+                                            L<small>3</small>= <span id="l3"></span>
+                                            <hr>
+                                            L<small>4</small>= <span id="l4"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <br>
+                    
                 </div>
             </div>
             <br>
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <h3>Gráfico</h3>
-                        </div>
-                        <div class="card-body">
-                           <div class="card">
-                            <div class="card-body">
-                                <div class="legendas">
-                                    <span class="legenda"><div class="red-circle"></div> R* </span>
-                                    <span class="legenda"><div class="blue-circle"></div> Referência</span>
-                                </div>
-                                <hr>
-                                <canvas id="myChart" style="width:100%;"></canvas>
-                            </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <br>
         </div>
         <div class="footer">
