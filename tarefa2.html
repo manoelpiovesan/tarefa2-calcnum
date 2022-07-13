@@ -8,12 +8,19 @@
 
     <body>
       
-        <div class="titulo text-center">
-            <h1>Trabalho 2</h1>
-          <h5>Cálculo Numérico</h5>
-          <h6>P<small>4</small>(X) de uma Aproximação Polinomial de Lagrange</h6>
-          <hr>
-          <p><strong>Manoel Rodrigues da Silva</strong> | <span style="font-weight: 400;">201910073511</span> </p>
+        <div class="header">
+            <img src="https://www.uerj.br/wp-content/themes/uerj/img/logo_uerj_branca.svg" alt="">
+            <div class="sub-titulo">
+                <h1>Trabalho 2</h1>
+                <div class="grey">
+                    <h5>P<small>4</small>(X) de uma Aproximação Polinomial de Lagrange</h5>
+                    <span>Cálculo Numérico | 2022.1</span>
+                    <p>Professor Hermes Alves Filho</p>
+                </div>
+            
+            <hr>
+            <p><strong>Manoel Rodrigues da Silva</strong> | <span style="font-weight: 400;">201910073511</span> </p>
+            </div>
         </div>
         <div class="container">
             
@@ -42,7 +49,7 @@
                                                     <input id="x0" placeholder='x0' type="number" class="form-control">
                                                 </th>
                                                 <td>
-                                                    <input id="fx0" placeholder='fx0' type="number" class="form-control">
+                                                    <input id="fx0" placeholder='f(x0)' type="number" class="form-control">
                                                 </td>
                                             </tr>
                                             <tr><!-- x1 f(x1)-->
@@ -53,7 +60,7 @@
                                                     <input id="x1" placeholder='x1' type="number" class="form-control">
                                                 </th>
                                                 <td>
-                                                    <input id="fx1" placeholder='fx1' type="number" class="form-control">
+                                                    <input id="fx1" placeholder='f(x1)' type="number" class="form-control">
                                                 </td>
                                             </tr>
                                             <tr><!-- x2 f(x2)-->
@@ -64,7 +71,7 @@
                                                     <input id="x2" placeholder='x2' type="number" class="form-control">
                                                 </th>
                                                 <td>
-                                                    <input id="fx2" placeholder='fx2' type="number" class="form-control">
+                                                    <input id="fx2" placeholder='f(x2)' type="number" class="form-control">
                                                 </td>
                                             </tr>
                                             <tr><!-- x3 f(x3)-->
@@ -75,7 +82,7 @@
                                                     <input id="x3" placeholder='x3' type="number" class="form-control">
                                                 </th>
                                                 <td>
-                                                    <input id="fx3" placeholder='fx3' type="number" class="form-control">
+                                                    <input id="fx3" placeholder='f(x3)' type="number" class="form-control">
                                                 </td>
                                             </tr>
                                             <tr><!-- x4 f(x4)-->
@@ -86,7 +93,7 @@
                                                     <input id="x4" placeholder='x4' type="number" class="form-control">
                                                 </th>
                                                 <td>
-                                                    <input id="fx4" placeholder='fx4' type="number" class="form-control">
+                                                    <input id="fx4" placeholder='f(x4)' type="number" class="form-control">
                                                 </td>
                                             </tr>
                                         
@@ -115,8 +122,8 @@
 
                         </div>
                         <div class="card-footer text-center">
-                            <button class="btn btn-success" onclick="Lagrange()">Aproximar</button>
-                            <button class="btn btn-danger" onclick="Limpar()">Limpar</button>
+                            <button class="btn btn-success" onclick="Lagrange()"><img src="snowflakes.png" width="20px" alt=""> Aproximar</button>
+                            <button class="btn btn-danger" onclick="Limpar()"><img src="limpar.png" width="20px" alt=""> Limpar</button>
                             
                         </div>
                         
@@ -155,6 +162,9 @@
                 </div>
             </div>
             <br>
+        </div>
+        <div class="footer">
+
         </div>
         <!--Funções-->
         <script src="tarefa2.js"></script>
