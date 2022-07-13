@@ -1,3 +1,4 @@
+
 function valores(){
     document.querySelector('#x0').value = 1.0
     document.querySelector('#x1').value = 1.3
@@ -47,19 +48,12 @@ function Limpar(){
     document.querySelector('#r-estrela').innerText = ''
     document.querySelector('#p4x').innerText = ''
     document.querySelector('#drp-resultado').innerText = ''
+
+    
     
 }
 
 function Lagrange(){
-    // valores 
-
-    
-
-    // if(document.getElementById('pre-dados').checked){
-    //     valores()
-    // }
-
-    //valores()
 
     // x e referencia
     var x = (document.getElementById('x').value)
@@ -98,7 +92,7 @@ function Lagrange(){
     //mostrando o polinomio montado
     document.getElementById('p4x').innerHTML = '('+l0 +'•'+fx0+')'+'+ ('+l1+"•"+fx1+') '+'+ ('+l2+"•"+fx2+') '+'+ ('+l3+"•"+fx3+') '+'+ ('+l4+"•"+fx4+') '
     
-    // polinõmio de lagrange
+    // polinomio de lagrange
     var r_estrela = ((l0 * fx0) + (l1 * fx1) + (l2 * fx2) + (l3 * fx3) + (l4 * fx4)).toFixed(7)
 
     // calculando o drp
@@ -106,4 +100,56 @@ function Lagrange(){
 
     document.getElementById('r-estrela').innerText = r_estrela
     document.getElementById('drp-resultado').innerText = drp
+
+    // criando gráfico
+
+
+    var valoresXY = [
+        {x: x0, y: fx0},
+        {x: x1, y: fx1},
+        {x: x2, y: fx2},
+        {x: x3, y: fx3},
+        {x: x4, y: fx4}
+        
+    ]
+
+    var valoresXR = [
+        {x: x, y: r_estrela}
+    ]
+
+    var valorR = [{x: x, y: r}]
+
+    var myChart = new Chart("myChart", {
+        type: "scatter",
+        data: {
+            labels: ['x0', 'x1', 'x2', 'x3', 'x4'],
+            datasets: [{
+                pointRadius: 4,
+                label: 'Dados',
+                pointBackgroundColor: 'grey',
+                data: valoresXY
+            },{
+                pointRadius: 6,
+                label: 'R*',
+                pointBackgroundColor: ['#dc3545'],
+                data: valoresXR
+            },{
+                pointRadius: 7,
+                label: 'R',
+                pointBackgroundColor: ['#0d6efd'],
+                data: valorR
+            }
+
+        ]
+        },
+        options: {
+            legend: {
+                display: false
+            }
+        }
+      });
+
 }
+
+// gráfico
+
