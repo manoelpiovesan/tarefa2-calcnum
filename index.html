@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="shortcut icon" href="img/snowflakes_black.png" type="image/x-icon">
+        <title>Tarefa 2 - Lagrange</title>
     </head>
 
     <body>
@@ -13,9 +15,10 @@
             <div class="sub-titulo">
                 <h1>Trabalho 2</h1>
                 <div class="grey">
-                    <h5>P<small>4</small>(X) de uma Aproximação Polinomial de Lagrange</h5>
+                    
                     <span>Cálculo Numérico | 2022.1</span>
                     <p>Professor Hermes Alves Filho</p>
+                    <h5>P<small>4</small>(X) de uma Aproximação Polinomial de Lagrange</h5>
                 </div>
             
             <hr>
@@ -32,6 +35,17 @@
                            
                             <div class="card">
                                 <div class="card-body">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" name="checkbox" type="checkbox" value="" id="pre-dados">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Utilizar dados pré-definidos
+                                                </label>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <p></p>
                                     <table class="table text-center">
                                         <thead>
                                           <tr>
@@ -99,12 +113,7 @@
                                         
                                         </tbody>
                                     </table>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="checkbox" type="checkbox" value="" id="pre-dados">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                          Utilizar dados pré-definidos
-                                        </label>
-                                      </div>
+                                    
                                 </div>
                             </div>
                               <hr>
@@ -123,7 +132,7 @@
                         </div>
                         <div class="card-footer text-center">
                            <div class="botoes">
-                                <button class="btn btn-success" onclick="Lagrange()"><img src="img/snowflakes.png" width="20px" alt=""> Aproximar</button>
+                                <button class="btn btn-dark" onclick="Lagrange()"><img src="img/snowflakes.png" width="20px" alt=""> Aproximar</button>
                                 <button class="btn btn-danger" onclick="Limpar()"><img src="img/limpar.png" width="20px" alt=""> Limpar</button>
                            </div>
                             
