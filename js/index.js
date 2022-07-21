@@ -16,7 +16,16 @@ function valores(){
     document.querySelector('#r').value = 0.51182771
 }
 
-document.querySelector("input[name=checkbox]").addEventListener('change', e=>{
+document.querySelector('#referencia-checkbox').addEventListener('change', e=>{
+    
+    if(document.querySelector('#referencia-checkbox').checked){
+        document.querySelector('#referencia-div').removeAttribute('hidden')
+    }else{
+        document.querySelector('#referencia-div').setAttribute('hidden', true)
+    }
+})
+
+document.querySelector("#pre-dados").addEventListener('change', e=>{
     if(document.querySelector('#pre-dados').checked){
         valores()
     }else{
@@ -97,7 +106,14 @@ function Lagrange(){
     var r_estrela = ((l0 * fx0) + (l1 * fx1) + (l2 * fx2) + (l3 * fx3) + (l4 * fx4)).toFixed(7)
 
     // calculando o drp
-    var drp = Math.abs(((r - r_estrela)/r_estrela)*100).toFixed(5)
+    if(document.querySelector('#referencia-checkbox').checked){
+        var drp = Math.abs(((r - r_estrela)/r_estrela)*100).toFixed(5)
+        var valorR = [{x: x, y: r}]
+        
+    }else{
+        drp = 'Sem referência'
+    }
+    
 
     document.getElementById('r-estrela').innerText = r_estrela
     document.getElementById('drp-resultado').innerText = drp
@@ -117,8 +133,7 @@ function Lagrange(){
     var valoresXR = [
         {x: x, y: r_estrela}
     ]
-
-    var valorR = [{x: x, y: r}]
+    
 
     var myChart = new Chart("myChart", {
         type: "scatter",
